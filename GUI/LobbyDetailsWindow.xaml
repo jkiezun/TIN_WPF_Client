@@ -1,0 +1,20 @@
+﻿<Window x:Class="GUI.LobbyDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800" Closed="Window_Closed" Name="LobbyDetails">
+    <Grid>
+        <Label x:Name="LobbyTitle" Content="Label" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.768,0.271" FontSize="24"/>
+        <Button x:Name="DeclareReadyButton" Content="Declare ready" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="Player 1: " HorizontalAlignment="Left" Margin="302,90,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PlayerOneName" Content="Label" HorizontalAlignment="Left" Height="26" Margin="360,90,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label x:Name="PlayerOneReady" Content="Not ready" HorizontalAlignment="Left" Height="25" Margin="345,121,0,0" VerticalAlignment="Top" Width="72"/>
+        <Label Content="Player 2:" HorizontalAlignment="Left" Height="26" Margin="302,160,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label x:Name="PlayerTwoName" Content="Label" HorizontalAlignment="Left" Margin="360,160,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PlayerTwoReady" Content="Not ready" HorizontalAlignment="Left" Height="26" Margin="343,191,0,0" VerticalAlignment="Top" Width="72"/>
+
+    </Grid>
+</Window>
