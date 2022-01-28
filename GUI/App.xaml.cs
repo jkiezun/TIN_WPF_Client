@@ -60,10 +60,10 @@ namespace GUI
                 // Establish the remote endpoint for the socket.  
                 IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
-                /*IPAddress[] addresses = Dns.GetHostEntry("2.tcp.ngrok.io").AddressList;
-                IPEndPoint remoteEP = new IPEndPoint(addresses[0], 17998);*/
-                IPAddress[] addresses = Dns.GetHostEntry("127.0.0.1").AddressList;
-                IPEndPoint remoteEP = new IPEndPoint(addresses[0], 12000);
+                IPAddress[] addresses = Dns.GetHostEntry("2.tcp.ngrok.io").AddressList;
+                IPEndPoint remoteEP = new IPEndPoint(addresses[0], 17998);
+                /*IPAddress[] addresses = Dns.GetHostEntry("127.0.0.1").AddressList;
+                IPEndPoint remoteEP = new IPEndPoint(addresses[0], 12000);*/
 
                 // Create a TCP/IP socket.  
                 Socket clientSocket = new Socket(addresses[0].AddressFamily,
@@ -213,7 +213,12 @@ namespace GUI
                             // option to send ready for host
                         } else if (response[0] == (char)RequestCodes.ENEMY_DEPLOYED)
                         {
-                            byte[] bytes = Encoding.ASCII.GetBytes(response);
+                            // resonse od razu w bajrtach
+                            // modul odbiera ramki
+                            // modul mapuje na polecenia
+                            // modul logiki gry
+                            // modul obslugujacy warstwe wizualna
+                            byte[] bytes = BitConverter.GetBytes(response);
                             var unitType = (int)response[1];
                             Array.Reverse(bytes, 2, 2);
                             var unitId = BitConverter.ToUInt16(bytes, 2);

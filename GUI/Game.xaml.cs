@@ -130,7 +130,7 @@ namespace GUI
 
         public void timer_Tick(object sender, EventArgs e)
         {
-            this.tickCounter++;
+            /*this.tickCounter++;
 
             if (tickCounter % 2 == 0)
             {
@@ -182,7 +182,7 @@ namespace GUI
                         }
                     };
                 }
-            });
+            });*/
 
 
         }
